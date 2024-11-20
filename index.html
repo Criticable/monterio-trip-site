@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podar International School - Monterio Village Day Trip</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: #0288d1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #01579b;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc80;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background: url('C:/Users/aarus.AARUSH-PC/Downloads/monterio.jpg') no-repeat center/cover;
+            color: white;
+            height: 400px;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero-text {
+            z-index: 2;
+            text-align: center;
+        }
+        .hero-text h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .hero-text .btn {
+            font-size: 1.2em;
+            padding: 15px 30px;
+            background: #ff6f00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .hero-text .btn:hover {
+            background: #e65100;
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .about h2 {
+            text-align: center;
+            color: #0288d1;
+            margin-bottom: 30px;
+        }
+        .about .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .about .details div {
+            flex: 1;
+            margin: 10px;
+            text-align: center;
+        }
+        .about .details img {
+            max-width: 80px;
+            margin-bottom: 10px;
+        }
+        .about .details p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Register Section */
+        .container {
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .container h2 {
+            color: #0288d1;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            width: 100%;
+            background: #0288d1;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0277bd;
+        }
+
+        /* Footer */
+        footer {
+            background: #0288d1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Podar International School
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About the Trip</a>
+        <a href="#register">Register Now</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Monterio Village Trip</h1>
+            <p>Experience the beauty of nature and culture on a day trip.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <div class="about" id="about">
+        <h2>Trip Details</h2>
+        <div class="details">
+            <div>
+                <img src="C:/Users/aarus.AARUSH-PC/Downloads/calendar.jpg.avif" alt="Date">
+                <p><strong>Date:</strong> 25th November 2024</p>
+            </div>
+            <div>
+                <img src="C:/Users/aarus.AARUSH-PC/Downloads/location.jpg" alt="Location">
+                <p><strong>Location:</strong> Monterio Village</p>
+            </div>
+            <div>
+                <img src="C:/Users/aarus.AARUSH-PC/Downloads/bus.png" alt="Transport">
+                <p><strong>Transport:</strong> Air-Conditioned Bus</p>
+            </div>
+            <div>
+                <img src="C:/Users/aarus.AARUSH-PC/Downloads/money.jpeg" alt="Price">
+                <p><strong>Price:</strong> ₹1500</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="register">
+        <h2>Register Now</h2>
+        <form action="thankyou.html" method="post">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" name="grade" required>
+
+            <label for="division">Division:</label>
+            <input type="text" id="division" name="division" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="contact">Parent Contact Number:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        Contact: +91-123-456-7890 | podartrip@example.com
+    </footer>
+
+    <script>
+        const registerContainer = document.querySelector('#register');
+
+        window.addEventListener('scroll', () => {
+            const registerPosition = registerContainer.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight;
+
+            if (registerPosition < screenPosition) {
+                registerContainer.classList.add('visible');
+            }
+        });
+    </script>
+</body>
+</html>

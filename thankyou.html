@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards ease-out;
+        }
+
+        h1 {
+            color: #0288d1;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .payment-info {
+            background: #ffcc80;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        /* Buttons */
+        a, button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #0288d1;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        a:hover, button:hover {
+            background: #0277bd;
+            transform: scale(1.05);
+        }
+
+        .make-payment {
+            margin-top: 10px;
+            background: #43a047;
+        }
+
+        .make-payment:hover {
+            background: #388e3c;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Your registration has been submitted successfully.</p>
+        <div class="payment-info">
+            <p><strong>Payment Details:</strong></p>
+            <p>Fee: ₹1500</p>
+            <p>Please pay via UPI or at the school office by 24th November 2024.</p>
+        </div>
+        <a href="index.html">Go Back to Homepage</a>
+        <button class="make-payment" onclick="makePayment()">Make Payment</button>
+    </div>
+
+    <script>
+        function makePayment() {
+            // Open UPI payment link
+            const upiUrl = "upi://pay?pa=rekhatiwari301@okhdfcbank&am=1500&cu=INR";
+             if (/Android|iPhone/i.test(navigator.userAgent)) {
+        window.location.href = upiUrl;
+    } else {
+        alert("Please use this payment link on a UPI-supported app or mobile device.");
+    }
+}
+        
+    </script>
+</body>
+</html>
