@@ -233,24 +233,19 @@
 
     <div class="container" id="register">
         <h2>Register Now</h2>
-        <form action="thankyou.html" method="post">
-            <label for="name">Student Name:</label>
-            <input type="text" id="name" name="name" required>
+      <form onsubmit="redirectToThankYou(); return false;">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <button type="submit">Submit</button>
+</form>
 
-            <label for="grade">Grade:</label>
-            <input type="text" id="grade" name="grade" required>
+<script>
+    function redirectToThankYou() {
+        // Redirect to the thank you page
+        window.location.href = "thankyou.html";
+    }
+</script>
 
-            <label for="division">Division:</label>
-            <input type="text" id="division" name="division" required>
-
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" required></textarea>
-
-            <label for="contact">Parent Contact Number:</label>
-            <input type="text" id="contact" name="contact" required>
-
-            <button type="submit">Submit</button>
-        </form>
     </div>
 
     <footer>
